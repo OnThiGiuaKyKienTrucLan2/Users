@@ -1,0 +1,20 @@
+resilience4j:
+  retry:
+    instances:
+      basic:
+        maxRetryAttemps: 5
+        waitDuration: 3s
+
+  ratelimiter:
+    instances:
+      basicExample:
+        limitForPeriod: 2
+        limitRefreshPeriod: 10s
+        timeoutDuration: 10s
+#
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
